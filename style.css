@@ -101,11 +101,6 @@
     background: #1d1d1d;
 }
 
-.colorBox:hover{
-    background: #00bfff;
-    transition-duration: 0s;
-}
-
 .backgroundAmim{
     position: absolute;
     top: 0;
