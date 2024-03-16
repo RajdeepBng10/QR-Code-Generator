@@ -1,0 +1,127 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Roboto',san-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 400px;
+    padding: 25px 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 10px;
+}
+
+.container p {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.container input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #494eea;
+    outline: 0;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 5px;
+}
+
+.container button {
+    width: 100%;
+    height: 50px;
+    background: #494eea;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin: 20px 0;
+    font-weight: 500;
+}
+
+#img-box {
+    width: 200;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+#img-box.show {
+    max-height: 350px;
+    margin: 10px auto;
+    border: 1px solid #d1d1d1;
+}
+
+#img-box img {
+    width: 100%;
+    padding: 10px;
+}
+
+.error{
+    animation: shake 0.1s linear 10;
+}
+
+@keyframes shake {
+    0%,50%, 100% {
+        transform: translateX(0);
+    }
+    25%, 75% {
+        transform: translateX(-2px);
+    }
+}
+
+.bgAnimation{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(20,1fr);
+    grid-template-rows: repeat(20,1fr);
+    background: #1d1d1d;
+    filter: saturate(2);
+    overflow: hidden;
+}
+
+.colorBox{
+    z-index: 2;
+    filter: brightness(1.1);
+    transition: 2s ease;
+    position: relative;
+    margin: 2px;
+    background: #1d1d1d;
+}
+
+.colorBox:hover{
+    background: #00bfff;
+    transition-duration: 0s;
+}
+
+.backgroundAmim{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: #00bfff;
+    filter: blur(60px);
+    animation: animBack 6s linear infinite;
+}
+
+@keyframes animBack {
+    0%{
+        top: -60px;
+    }
+    100%{
+        top: 120%;
+    }
+}
